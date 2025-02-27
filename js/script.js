@@ -186,3 +186,31 @@ const Countdown = {
 };
 
 Countdown.init();
+
+const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxX_Hj_E1u3NI2S0XkuU1lp9-V7CZ1eLnmhbJyp4kCdtDC0BY5jSBxTv4xoOSw8_oQeJg/exec";
+const form = document.getElementById("rsvpForm");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Tạo formData
+    const formData = new FormData(form);
+
+    // Gửi POST request
+    fetch(scriptURL, { method: "POST", body: formData })
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.result === "success") {
+                alert("Gửi thành công! Cảm ơn bạn đã phản hồi.");
+                form.reset();
+            } else {
+                alert("Có lỗi xảy ra, vui lòng thử lại!");
+                console.log("Error data:", data);
+            }
+        })
+        .catch((error) => {
+            alert("Kết nối bị lỗi, vui lòng thử lại!");
+            console.error("Error!", error);
+        });
+});

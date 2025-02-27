@@ -894,6 +894,128 @@ body {
 }
 
 /* --------------------------------------------------
+                    rsvp-section
+ --------------------------------------------------  */
+/* Container tổng */
+.rsvp-section {
+    padding: 50px 20px;
+    background-color: #fff; /* Tùy ý */
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif; /* Ví dụ font */
+}
+
+.rsvp-section__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px; /* Khoảng cách giữa 2 cột */
+    align-items: flex-start; /* Căn top cột */
+}
+
+/* ====== Cột trái (Form) ====== */
+.rsvp-section__form {
+    flex: 1; /* Cột chiếm 1 phần */
+    background-color: #fef5f7; /* Màu nền nhẹ tùy ý */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề form */
+.rsvp-section__form-title {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    color: #8e2f4f; /* Màu chủ đạo tùy ý */
+    text-transform: uppercase;
+}
+
+/* Mỗi nhóm input */
+.rsvp-section__group {
+    margin-bottom: 20px;
+}
+
+.rsvp-section__label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 600;
+}
+
+/* Radio & Checkbox */
+.rsvp-section__group input[type="radio"],
+.rsvp-section__group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Input text, email, tel... */
+.rsvp-section__group input[type="text"],
+.rsvp-section__group input[type="email"],
+.rsvp-section__group input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Nút gửi */
+.rsvp-section__submit {
+    display: inline-block;
+    background-color: #c72851; /* Màu nút */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.rsvp-section__submit:hover {
+    background-color: #b02349;
+}
+
+.rsvp-section__image-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.rsvp-section__image {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rsvp-section__message-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rsvp-section__icon {
+    width: auto;
+    height: auto;
+}
+
+.rsvp-section__message {
+    width: 100%;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #555;
+    font-family: "Dancing Script", cursive;
+}
+
+.rsvp-section__message-sub {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    font-family: "Manrope", sans-serif;
+}
+
+/* --------------------------------------------------
                     music-control
  --------------------------------------------------  */
 /* Nút điều khiển nhạc */
