@@ -28,138 +28,316 @@
 
         <!-- Link đến file JavaScript -->
         <script src="js/script.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
     </head>
     <body>
-        <!-- Section Home: 2 hình hai bên, tên ở giữa, ngày tháng năm cưới, địa chỉ -->
-        <section id="home-section" class="hero-section">
-            <div class="hero-content">
-                <div class="hero-image hero-image-left">
-                    <img src="images/home/IMG_4553.JPG" alt="Cô dâu chú rể" />
+        <!-- home-section -->
+        <section id="home-section" class="home">
+            <div class="home__content">
+                <div class="home__image home__image--left">
+                    <img
+                        src="images/home/IMG_4553.JPG"
+                        alt="Cô dâu chú rể"
+                        class="home__img"
+                    />
                 </div>
-                <div class="hero-text">
-                    <h1 class="wedding-title font-manrope">Chúng mình cưới</h1>
-                    <h2 class="couple-name">Võ Thúy</h2>
-                    <h2 class="couple-name font-size-90">&amp;</h2>
-                    <h2 class="couple-name">Anh Tùng</h2>
-                    <p class="wedding-date">05 Tháng 04, 2025</p>
-                    <p class="wedding-location">
+                <div class="home__text">
+                    <h1 class="home__title font-manrope">Chúng mình cưới</h1>
+                    <h2 class="home__couple-name">Võ Thúy</h2>
+                    <h2 class="home__couple-name home__couple-name--separator">
+                        &amp;
+                    </h2>
+                    <h2 class="home__couple-name">Anh Tùng</h2>
+                    <p class="home__date">05 Tháng 04, 2025</p>
+                    <p class="home__location">
                         <i class="fa-solid fa-location-dot"></i> 203 Đường Liên
                         Thôn, Thôn 8, xã Cưêbur, Tp. Buôn Ma Thuột
                     </p>
                     <a
                         href="https://www.google.com/maps/search/?api=1&query=12%C2%B043'07.9%22N+107%C2%B058'35.8%22E"
-                        class="btn-view-invite"
+                        class="home__btn-view"
                         target="_blank"
                         >Xem vị trí</a
                     >
                 </div>
-                <div class="hero-image hero-image-right">
-                    <img src="images/home/IMG_4562.JPG" alt="Cô dâu chú rể" />
+                <div class="home__image home__image--right">
+                    <img
+                        src="images/home/IMG_4562.JPG"
+                        alt="Cô dâu chú rể"
+                        class="home__img"
+                    />
                 </div>
             </div>
         </section>
 
-        <!-- Section Giờ đón khách, làm lễ cưới -->
-        <section id="event-section" class="content-section">
-            <div class="content-container">
-                <h3>Giờ Đón Khách & Làm Lễ Cưới</h3>
-                <div class="event-grid">
-                    <div class="event">
-                        <img src="images/event/even-1.png" alt="Đón Khách" />
-                        <p class="event-time">17:00</p>
-                        <h4 class="event-title">Đón Khách</h4>
-                        <p class="event-description">Bắt đầu đón khách</p>
+        <!-- event-section -->
+        <section id="event-section" class="event-section">
+            <div class="event-section__container">
+                <h3 class="event-section__heading">
+                    Giờ Đón Khách &amp; Làm Lễ Cưới
+                </h3>
+                <div class="event-section__grid">
+                    <div class="event-section__item">
+                        <img
+                            src="images/event/event-1.png"
+                            alt="Đón Khách"
+                            class="event-section__item-image"
+                        />
+                        <p class="event-section__item-time">17:00</p>
+                        <h4 class="event-section__item-title">Đón Khách</h4>
+                        <p class="event-section__item-description">
+                            Bắt đầu đón khách
+                        </p>
                     </div>
-                    <div class="event">
-                        <img src="images/event/event-2.png" alt="Làm Lễ" />
-                        <p class="event-time">18:00</p>
-                        <h4 class="event-title">Làm Lễ</h4>
-                        <p class="event-description">Bắt đầu làm lễ</p>
+                    <div class="event-section__item">
+                        <img
+                            src="images/event/event-2.png"
+                            alt="Làm Lễ"
+                            class="event-section__item-image"
+                        />
+                        <p class="event-section__item-time">18:00</p>
+                        <h4 class="event-section__item-title">Làm Lễ</h4>
+                        <p class="event-section__item-description">
+                            Bắt đầu làm lễ
+                        </p>
                     </div>
-                    <div class="event">
-                        <img src="images/event/event-3.png" alt="Khai Tiệc" />
-                        <p class="event-time">19:00</p>
-                        <h4 class="event-title">Khai Tiệc</h4>
-                        <p class="event-description">Bắt đầu khai tiệc</p>
+                    <div class="event-section__item">
+                        <img
+                            src="images/event/event-3.png"
+                            alt="Khai Tiệc"
+                            class="event-section__item-image"
+                        />
+                        <p class="event-section__item-time">19:00</p>
+                        <h4 class="event-section__item-title">Khai Tiệc</h4>
+                        <p class="event-section__item-description">
+                            Bắt đầu khai tiệc
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section Thiệp mời cưới -->
-        <section id="invitation-section-groom" class="content-section-full">
-            <div class="content-container-full">
-                <div class="invitation">
-                    <div class="left-container">
+        <!-- Invitation Section: Groom Version -->
+        <section
+            id="invitation-section-groom"
+            class="invitation-section invitation-section--groom"
+        >
+            <div class="invitation-section__container">
+                <h1 class="invitation-section__title">Nhà Gái</h1>
+                <div class="invitation-section__content">
+                    <!-- Cột bên trái: Save the Date -->
+                    <div class="invitation-section__left">
                         <img
                             src="images/invitation/save-the-date.png"
                             alt="Save the Date"
-                            class="save-the-date-image"
+                            class="invitation-section__save-date-image"
                         />
                     </div>
-
-                    <div class="right-container">
-                        <div class="parents">
-                            <div>
-                                <h3 class="groom-name">Nhà Trai</h3>
-                                <p class="groom-parent">Ông: Lê Trinh</p>
-                                <p class="groom-parent">Bà: Hồ Thị Kim Khánh</p>
+                    <!-- Cột bên phải: Nội dung chi tiết -->
+                    <div class="invitation-section__right">
+                        <!-- Nhóm phụ huynh -->
+                        <div class="invitation-section__parents">
+                            <div class="invitation-section__parent-group">
+                                <h3 class="invitation-section__parent-title">
+                                    Nhà Trai
+                                </h3>
+                                <p class="invitation-section__parent">
+                                    Ông: Lê Trinh
+                                </p>
+                                <p class="invitation-section__parent">
+                                    Bà: Hồ Thị Kim Khánh
+                                </p>
                             </div>
-                            <div>
+                            <div class="invitation-section__flower">
                                 <img
                                     src="images/invitation/flower.png"
                                     alt="flower"
-                                    class="flower-image"
+                                    class="invitation-section__flower-image"
                                 />
                             </div>
-                            <div>
-                                <h3 class="bride-name">Nhà Gái</h3>
-                                <p class="bride-parent">Ông: Võ Văn Giang</p>
-                                <p class="bride-parent">Bà: Nguyễn Thị Thiện</p>
+                            <div class="invitation-section__parent-group">
+                                <h3 class="invitation-section__parent-title">
+                                    Nhà Gái
+                                </h3>
+                                <p class="invitation-section__parent">
+                                    Ông: Võ Văn Giang
+                                </p>
+                                <p class="invitation-section__parent">
+                                    Bà: Nguyễn Thị Thiện
+                                </p>
                             </div>
                         </div>
-
-                        <div class="invitation-text">
-                            <p class="invitation-text-1">Trân trọng kính mời</p>
-                            <p class="invitation-text-2">Bạn cùng gia đình</p>
-                            <p class="invitation-text-3">
+                        <!-- Nội dung lời mời -->
+                        <div class="invitation-section__text">
+                            <p class="invitation-section__text-line">
+                                Trân trọng kính mời
+                            </p>
+                            <p class="invitation-section__text-line">
+                                Bạn cùng gia đình
+                            </p>
+                            <p class="invitation-section__text-line">
                                 (Tới dự lễ Vu Quy của hai con chúng tôi)
                             </p>
                         </div>
-
-                        <div class="bride-groom">
-                            <p class="full-name-groom">Lê Anh Tùng</p>
-                            <div class="heart-image-container">
+                        <!-- Tên cô dâu – chú rể -->
+                        <div class="invitation-section__bride-groom">
+                            <p
+                                class="invitation-section__name invitation-section__name--groom"
+                            >
+                                Lê Anh Tùng
+                            </p>
+                            <div class="invitation-section__heart">
                                 <img
                                     src="images/invitation/heart.png"
                                     alt="heart"
-                                    class="heart-image"
+                                    class="invitation-section__heart-image"
                                 />
                             </div>
-                            <p class="full-name-bride">Võ Thúy</p>
+                            <p
+                                class="invitation-section__name invitation-section__name--bride"
+                            >
+                                Võ Thúy
+                            </p>
                         </div>
-
-                        <div class="date-time">
-                            <p class="date-time-text-1">
+                        <!-- Thông tin thời gian -->
+                        <div class="invitation-section__date-time">
+                            <p class="invitation-section__date-line">
                                 Tổ chức vào lúc 11:00
                             </p>
-                            <p class="date-time-text-2">
+                            <p class="invitation-section__date-line">
                                 Thứ Bảy, ngày 05 tháng 04 năm 2025
                             </p>
-                            <p class="date-time-text-3">
+                            <p class="invitation-section__date-line">
                                 (Tức ngày 08 tháng 03 năm 2025 Ất Tỵ)
                             </p>
                         </div>
-
-                        <div class="location">
-                            <p class="location-text-1">Tại gia đình Nhà Gái:</p>
-                            <p class="location-text-2">
+                        <!-- Địa điểm -->
+                        <div class="invitation-section__location">
+                            <p class="invitation-section__location-label">
+                                Tại gia đình Nhà Gái:
+                            </p>
+                            <p class="invitation-section__location-address">
                                 203 Đường Liên Thôn, Thôn 8, xã Cuébur, Tp. Buôn
                                 Ma Thuột
                             </p>
                         </div>
+                        <!-- Footer -->
+                        <h5 class="invitation-section__footer">
+                            Sự hiện diện của Quý khách là niềm vinh hạnh của gia
+                            đình chúng tôi!
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <div class="footer">
+        <!-- Invitation Section: Bride Version -->
+        <section
+            id="invitation-section-bride"
+            class="invitation-section invitation-section--bride"
+        >
+            <div class="invitation-section__container">
+                <h1 class="invitation-section__title">Nhà Trai</h1>
+                <div class="invitation-section__content">
+                    <!-- Cột bên trái: Save the Date -->
+                    <div class="invitation-section__left">
+                        <img
+                            src="images/invitation/gold-circle.jpg"
+                            alt="Save the Date"
+                            class="invitation-section__save-date-image"
+                        />
+                    </div>
+                    <!-- Cột bên phải: Nội dung chi tiết -->
+                    <div class="invitation-section__right">
+                        <!-- Nhóm phụ huynh -->
+                        <div class="invitation-section__parents">
+                            <div class="invitation-section__parent-group">
+                                <h3 class="invitation-section__parent-title">
+                                    Nhà Trai
+                                </h3>
+                                <p class="invitation-section__parent">
+                                    Ông: Lê Trinh
+                                </p>
+                                <p class="invitation-section__parent">
+                                    Bà: Hồ Thị Kim Khánh
+                                </p>
+                            </div>
+                            <div class="invitation-section__flower">
+                                <img
+                                    src="images/invitation/flower.png"
+                                    alt="flower"
+                                    class="invitation-section__flower-image"
+                                />
+                            </div>
+                            <div class="invitation-section__parent-group">
+                                <h3 class="invitation-section__parent-title">
+                                    Nhà Gái
+                                </h3>
+                                <p class="invitation-section__parent">
+                                    Ông: Võ Văn Giang
+                                </p>
+                                <p class="invitation-section__parent">
+                                    Bà: Nguyễn Thị Thiện
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Nội dung lời mời -->
+                        <div class="invitation-section__text">
+                            <p class="invitation-section__text-line">
+                                Trân trọng kính mời
+                            </p>
+                            <p class="invitation-section__text-line">
+                                Bạn cùng gia đình
+                            </p>
+                            <p class="invitation-section__text-line">
+                                (Tới dự lễ Vu Quy của hai con chúng tôi)
+                            </p>
+                        </div>
+                        <!-- Tên cô dâu – chú rể -->
+                        <div class="invitation-section__bride-groom">
+                            <p
+                                class="invitation-section__name invitation-section__name--groom"
+                            >
+                                Lê Anh Tùng
+                            </p>
+                            <div class="invitation-section__heart">
+                                <img
+                                    src="images/invitation/heart.png"
+                                    alt="heart"
+                                    class="invitation-section__heart-image"
+                                />
+                            </div>
+                            <p
+                                class="invitation-section__name invitation-section__name--bride"
+                            >
+                                Võ Thúy
+                            </p>
+                        </div>
+                        <!-- Thông tin thời gian -->
+                        <div class="invitation-section__date-time">
+                            <p class="invitation-section__date-line">
+                                Tổ chức vào lúc 11:00
+                            </p>
+                            <p class="invitation-section__date-line">
+                                Thứ Bảy, ngày 05 tháng 04 năm 2025
+                            </p>
+                            <p class="invitation-section__date-line">
+                                (Tức ngày 08 tháng 03 năm 2025 Ất Tỵ)
+                            </p>
+                        </div>
+                        <!-- Địa điểm -->
+                        <div class="invitation-section__location">
+                            <p class="invitation-section__location-label">
+                                Tại gia đình Nhà Gái:
+                            </p>
+                            <p class="invitation-section__location-address">
+                                203 Đường Liên Thôn, Thôn 8, xã Cuébur, Tp. Buôn
+                                Ma Thuột
+                            </p>
+                        </div>
+                        <!-- Footer -->
+                        <div class="invitation-section__footer">
                             Sự hiện diện của Quý khách là niềm vinh hạnh của gia
                             đình chúng tôi!
                         </div>
@@ -168,81 +346,206 @@
             </div>
         </section>
 
-        <section id="invitation-section-bride" class="content-section-full">
-            <div class="content-container-full">
-                <div class="invitation invitation-section-bride">
-                    <div class="left-container">
+        <!-- wedding-section -->
+        <section class="wedding-section">
+            <div class="wedding-section__container">
+                <div class="wedding-section__bride">
+                    <p class="wedding-section__title">CÔ DÂU</p>
+                    <p class="wedding-section__name">Võ Thúy</p>
+                    <p class="wedding-section__message">Cô dâu viết gì đi...</p>
+                    <div class="wedding-section__image-wrapper">
                         <img
-                            src="images/invitation/save-the-date.png"
-                            alt="Save the Date"
-                            class="save-the-date-image"
+                            src="./images/wedding-section/IMG_4561.JPG"
+                            alt="Võ Thúy"
+                            class="wedding-section__image"
                         />
                     </div>
+                </div>
 
-                    <div class="right-container">
-                        <div class="parents">
-                            <div>
-                                <h3 class="groom-name">Nhà Trai</h3>
-                                <p class="groom-parent">Ông: Lê Trinh</p>
-                                <p class="groom-parent">Bà: Hồ Thị Kim Khánh</p>
-                            </div>
-                            <div>
-                                <img
-                                    src="images/invitation/flower.png"
-                                    alt="flower"
-                                    class="flower-image"
-                                />
-                            </div>
-                            <div>
-                                <h3 class="bride-name">Nhà Gái</h3>
-                                <p class="bride-parent">Ông: Võ Văn Giang</p>
-                                <p class="bride-parent">Bà: Nguyễn Thị Thiện</p>
-                            </div>
+                <div class="wedding-section__center">
+                    <img
+                        src="images/wedding-section/IMG_4544.JPG"
+                        alt="Võ Thúy & Lê Anh Tùng"
+                        class="wedding-section__center-image"
+                    />
+                </div>
+
+                <div class="wedding-section__groom">
+                    <div class="wedding-section__image-wrapper">
+                        <img
+                            src="images/wedding-section/IMG_4550.JPG"
+                            alt="Lê Anh Tùng"
+                            class="wedding-section__image"
+                        />
+                    </div>
+                    <p class="wedding-section__title">CHÚ RỂ</p>
+                    <p class="wedding-section__name">Lê Anh Tùng</p>
+                    <p class="wedding-section__message">Chú rể viết gì đi...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section id="countdown-section" class="countdown-section">
+            <div class="countdown-section__container">
+                <p
+                    class="countdown-section__container-line countdown-section__container-line--one"
+                >
+                    Cho đến ngày
+                </p>
+                <p
+                    class="countdown-section__container-line countdown-section__container-line--two"
+                >
+                    Về chung một nhà
+                </p>
+                <p
+                    class="countdown-section__container-line countdown-section__container-line--three"
+                >
+                    Cùng chúng mình đếm ngược nhé!
+                </p>
+
+                <div class="countdown-section__timer">
+                    <!-- Days Unit -->
+                    <div
+                        class="countdown-section__unit countdown-section__unit--days"
+                        data-init-value="00"
+                    >
+                        <span class="countdown-section__unit-title">Ngày</span>
+                        <div
+                            class="countdown-section__digit countdown-section__digit--first"
+                        >
+                            <span class="countdown-section__digit-top">0</span>
+                            <span class="countdown-section__digit-top-back"
+                                ><span>0</span></span
+                            >
+                            <span class="countdown-section__digit-bottom"
+                                >0</span
+                            >
+                            <span class="countdown-section__digit-bottom-back"
+                                ><span>0</span></span
+                            >
                         </div>
-
-                        <div class="invitation-text">
-                            <p class="invitation-text-1">Trân trọng kính mời</p>
-                            <p class="invitation-text-2">Bạn cùng gia đình</p>
-                            <p class="invitation-text-3">
-                                (Tới dự lễ Vu Quy của hai con chúng tôi)
-                            </p>
+                        <div
+                            class="countdown-section__digit countdown-section__digit--second"
+                        >
+                            <span class="countdown-section__digit-top">0</span>
+                            <span class="countdown-section__digit-top-back"
+                                ><span>0</span></span
+                            >
+                            <span class="countdown-section__digit-bottom"
+                                >0</span
+                            >
+                            <span class="countdown-section__digit-bottom-back"
+                                ><span>0</span></span
+                            >
                         </div>
+                    </div>
 
-                        <div class="bride-groom">
-                            <p class="full-name-groom">Lê Anh Tùng</p>
-                            <div class="heart-image-container">
-                                <img
-                                    src="images/invitation/heart.png"
-                                    alt="heart"
-                                    class="heart-image"
-                                />
-                            </div>
-                            <p class="full-name-bride">Võ Thúy</p>
+                    <!-- Hours Unit -->
+                    <div
+                        class="countdown-section__unit countdown-section__unit--hours"
+                        data-init-value="00"
+                    >
+                        <span class="countdown-section__unit-title">Giờ</span>
+                        <div
+                            class="countdown-section__digit countdown-section__digit--first"
+                        >
+                            <span class="countdown-section__digit-top">0</span>
+                            <span class="countdown-section__digit-top-back"
+                                ><span>0</span></span
+                            >
+                            <span class="countdown-section__digit-bottom"
+                                >0</span
+                            >
+                            <span class="countdown-section__digit-bottom-back"
+                                ><span>0</span></span
+                            >
                         </div>
-
-                        <div class="date-time">
-                            <p class="date-time-text-1">
-                                Tổ chức vào lúc 11:00
-                            </p>
-                            <p class="date-time-text-2">
-                                Thứ Bảy, ngày 05 tháng 04 năm 2025
-                            </p>
-                            <p class="date-time-text-3">
-                                (Tức ngày 08 tháng 03 năm 2025 Ất Tỵ)
-                            </p>
+                        <div
+                            class="countdown-section__digit countdown-section__digit--second"
+                        >
+                            <span class="countdown-section__digit-top">0</span>
+                            <span class="countdown-section__digit-top-back"
+                                ><span>0</span></span
+                            >
+                            <span class="countdown-section__digit-bottom"
+                                >0</span
+                            >
+                            <span class="countdown-section__digit-bottom-back"
+                                ><span>0</span></span
+                            >
                         </div>
+                    </div>
 
-                        <div class="location">
-                            <p class="location-text-1">Tại gia đình Nhà Gái:</p>
-                            <p class="location-text-2">
-                                203 Đường Liên Thôn, Thôn 8, xã Cuébur, Tp. Buôn
-                                Ma Thuột
-                            </p>
+                    <!-- Minutes Unit -->
+                    <div
+                        class="countdown-section__unit countdown-section__unit--minutes"
+                        data-init-value="00"
+                    >
+                        <span class="countdown-section__unit-title">Phút</span>
+                        <div
+                            class="countdown-section__digit countdown-section__digit--first"
+                        >
+                            <span class="countdown-section__digit-top">0</span>
+                            <span class="countdown-section__digit-top-back"
+                                ><span>0</span></span
+                            >
+                            <span class="countdown-section__digit-bottom"
+                                >0</span
+                            >
+                            <span class="countdown-section__digit-bottom-back"
+                                ><span>0</span></span
+                            >
                         </div>
+                        <div
+                            class="countdown-section__digit countdown-section__digit--second"
+                        >
+                            <span class="countdown-section__digit-top">0</span>
+                            <span class="countdown-section__digit-top-back"
+                                ><span>0</span></span
+                            >
+                            <span class="countdown-section__digit-bottom"
+                                >0</span
+                            >
+                            <span class="countdown-section__digit-bottom-back"
+                                ><span>0</span></span
+                            >
+                        </div>
+                    </div>
 
-                        <div class="footer">
-                            Sự hiện diện của Quý khách là niềm vinh hạnh của gia
-                            đình chúng tôi!
+                    <!-- Seconds Unit -->
+                    <div
+                        class="countdown-section__unit countdown-section__unit--seconds"
+                        data-init-value="00"
+                    >
+                        <span class="countdown-section__unit-title">Giây</span>
+                        <div
+                            class="countdown-section__digit countdown-section__digit--first"
+                        >
+                            <span class="countdown-section__digit-top">0</span>
+                            <span class="countdown-section__digit-top-back"
+                                ><span>0</span></span
+                            >
+                            <span class="countdown-section__digit-bottom"
+                                >0</span
+                            >
+                            <span class="countdown-section__digit-bottom-back"
+                                ><span>0</span></span
+                            >
+                        </div>
+                        <div
+                            class="countdown-section__digit countdown-section__digit--second"
+                        >
+                            <span class="countdown-section__digit-top">0</span>
+                            <span class="countdown-section__digit-top-back"
+                                ><span>0</span></span
+                            >
+                            <span class="countdown-section__digit-bottom"
+                                >0</span
+                            >
+                            <span class="countdown-section__digit-bottom-back"
+                                ><span>0</span></span
+                            >
                         </div>
                     </div>
                 </div>

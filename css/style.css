@@ -7,6 +7,23 @@
     --border-color: #00000059;
     --background-color: #ffffff;
     --background-image: url("../images/home/background.jpg");
+
+    --text-color-black: #000; /* Màu đen */
+    --text-color-white: #fff; /* Màu trắng */
+    --text-color-light-gray: #797979; /* Màu xám nhạt */
+
+    /* Add new variables for commonly used values */
+    --spacing-standard: 20px;
+    --spacing-large: 40px;
+    --border-radius-standard: 10px;
+    --border-radius-round: 50px;
+    --max-width-container: 1400px;
+
+    /* Font families */
+    --font-primary: "Manrope", sans-serif;
+    --font-decorative: "Dancing Script", serif;
+    --font-accent: "Great Vibes", cursive;
+    --font-body: "Questrial", sans-serif;
 }
 
 /* Font chính: Manrope (sans-serif) */
@@ -20,20 +37,18 @@ body {
 /* --------------------------------------------------
                     home-section
  --------------------------------------------------  */
-/* Phần bao quanh hero (ảnh + tên cặp đôi) */
-.hero-section {
+.home {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #ffffff;
-    background-image: url("../images/home/background.jpg"); /* Đường dẫn đến hình nền */
-    background-size: cover; /* Đảm bảo hình nền bao phủ toàn bộ section */
-    background-position: center; /* Căn giữa hình nền */
+    background-color: var(--background-color);
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
 }
 
-/* Bọc nội dung hero */
-.hero-content {
+.home__content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -45,7 +60,7 @@ body {
 }
 
 /* Ảnh bên trái, phải */
-.hero-image {
+.home__image {
     flex: 1 1 50px;
     display: flex;
     justify-content: center;
@@ -53,7 +68,7 @@ body {
     position: relative;
 }
 
-.hero-image img {
+.home__img {
     max-width: 100%;
     height: auto;
     border-radius: 300px;
@@ -62,81 +77,77 @@ body {
     border: 1px solid var(--border-color);
 }
 
-.hero-image-left::before,
-.hero-image-left::after,
-.hero-image-right::before,
-.hero-image-right::after {
+/* Các pseudo-element cho ảnh bên trái & phải */
+.home__image--left::before,
+.home__image--left::after,
+.home__image--right::before,
+.home__image--right::after {
     content: "";
     position: absolute;
-    width: 50px; /* Kích thước của icon, bạn có thể thay đổi */
-    height: 50px; /* Kích thước của icon, bạn có thể thay đổi */
+    width: 117px;
+    height: 180px;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-.hero-image-left::before {
-    bottom: 0px; /* Điều chỉnh vị trí của icon */
-    left: -55px; /* Điều chỉnh vị trí của icon */
-    width: 117px;
-    height: 180px;
-    background-image: url("../images/home/icon-flowers-left-before.png"); /* Đường dẫn đến icon */
+.home__image--left::before {
+    bottom: 0;
+    left: -55px;
+    background-image: url("../images/home/icon-flowers-left-before.png");
 }
 
-.hero-image-left::after {
+.home__image--left::after {
     top: 0;
     right: -50px;
-    width: 117px;
-    height: 180px;
     background-image: url("../images/home/icon-flowers-left-after.png");
 }
 
-.hero-image-right::before {
+.home__image--right::before {
     top: -20px;
     left: -40px;
-    width: 117px;
-    height: 180px;
-    background-image: url("../images/home/icon-flowers-right-before.png"); /* Đường dẫn đến icon */
+    background-image: url("../images/home/icon-flowers-right-before.png");
     transform: scaleY(-1);
 }
 
-.hero-image-right::after {
-    bottom: -0;
+.home__image--right::after {
+    bottom: 0;
     right: -40px;
-    width: 117px;
-    height: 180px;
     background-image: url("../images/home/icon-flowers-right-after.png");
     transform: scaleY(-1);
 }
 
 /* Phần text ở giữa */
-.hero-text {
+.home__text {
     flex: 1 1 300px;
     text-align: center;
     margin: 50px;
 }
 
-.wedding-title {
+.home__title {
     color: #555555;
 }
 
-.couple-name {
-    font-family: "Great Vibes", cursive;
-    font-size: 3rem;
-    margin: 0;
+.home__couple-name {
+    font-family: var(--font-accent);
+    font-size: var(--font-size-xlarge);
     font-weight: 400;
-    color: #000;
+    color: var(--text-color-black);
+    margin: 0;
 }
 
-/* Ngày tháng năm cưới */
-.wedding-date {
+.home__couple-name--separator {
+    font-size: 100px;
+}
+
+.home__date {
     font-size: 26px;
     margin: 30px 0;
     position: relative;
     padding: 10px 0;
 }
 
-.wedding-date::before,
-.wedding-date::after {
+.home__date::before,
+.home__date::after {
     content: "";
     position: absolute;
     left: 0;
@@ -145,146 +156,158 @@ body {
     background-color: #000;
 }
 
-.wedding-date::before {
+.home__date::before {
     top: 0;
 }
 
-.wedding-date::after {
+.home__date::after {
     bottom: 0;
 }
 
-/* Địa điểm cưới */
-.wedding-location {
+.home__location {
     display: flex;
     gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     font-size: 1rem;
-    margin: 30px 0 30px 0;
+    margin: 30px 0;
 }
 
-/* Nút xem thiệp */
-.btn-view-invite {
+.home__btn-view {
     display: inline-block;
     background-color: #fff;
     border: 1px solid #00000059;
     color: #000;
     text-decoration: none;
-    padding: 17px 50px 13px;
+    padding: 15px 50px 13px;
     border-radius: 50px;
     font-size: 1rem;
     transition: background-color 0.3s;
 }
 
-.btn-view-invite:hover {
-    background-color: #bf7c5d;
+.home__btn-view:hover {
+    background-color: #000;
+    color: #fff;
 }
 
-/* --------------------------------------------------
-                    event-section
- --------------------------------------------------  */
-/* Phần nội dung thiệp */
-.content-section {
-    padding: 40px 20px;
-    background: #fff;
+/* ----------------------------------------------
+                event-section
+---------------------------------------------- */
+.event-section {
+    background: var(--background-color);
     text-align: center;
+    padding: var(--spacing-large) var(--spacing-standard);
 }
 
-.content-section-full {
-    background: #fff;
-    text-align: center;
-}
-
-.content-container {
-    max-width: 1400px;
+.event-section__container {
     margin: 0 auto;
+    max-width: var(--max-width-container);
 }
 
-.content-container h3 {
+.event-section__heading {
     font-size: 2rem;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
-.content-container-full {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.event-grid {
+.event-section__grid {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.event {
+.event-section__item {
     flex: 1 1 30%;
     text-align: center;
-    perspective: 1000px; /* Thêm perspective cho hiệu ứng 3D */
+    perspective: 1000px;
 }
 
-.event img {
+.event-section__item-image {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: var(--border-radius-standard);
     transition: transform 0.6s;
     transform-style: preserve-3d;
 }
 
-.event:hover img {
+.event-section__item:hover .event-section__item-image {
     transform: rotateY(180deg);
 }
 
-.event-time {
+.event-section__item-time {
     font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
+    margin: 5px 0;
+    font-family: "Manrope", sans-serif;
+    color: var(--text-color-light-gray);
 }
 
-.event h4 {
+.event-section__item-title {
     font-size: 30px;
     margin: 20px 0;
     font-weight: 700;
     font-family: "Dancing Script", serif;
 }
 
-.event-description {
+.event-section__item-description {
     font-size: 1rem;
     color: #666;
 }
 
-/* --------------------------------------------------
-                    invitation-section-groom
- --------------------------------------------------  */
-.invitation {
+/* ----------------------------------------------
+                invitation-section
+---------------------------------------------- */
+.invitation-section {
+    background: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.invitation-section__container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.invitation-section__title {
+    padding: 40px 0;
+    font-family: "Dancing Script", serif;
+    font-size: 60px;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Nội dung chính */
+.invitation-section__content {
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
     background: #fff;
     border-radius: 10px;
 }
 
-.left-container {
+/* Cột trái: Save the Date */
+.invitation-section__left {
     flex: 1 1 50%;
 }
 
-.save-the-date-image {
+.invitation-section__save-date-image {
     max-width: 100%;
     height: auto;
     width: 400px;
     margin-bottom: 20px;
 }
 
-.right-container {
+/* Cột phải: Nội dung chi tiết */
+.invitation-section__right {
     flex: 1 1 50%;
 }
 
-.parents {
+/* Nhóm phụ huynh */
+.invitation-section__parents {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -292,115 +315,345 @@ body {
     margin-bottom: 20px;
 }
 
-.parents div {
+.invitation-section__parent-group {
     width: 45%;
-    padding: 20px 20px 0 20px;
+    padding: 20px;
+    padding-top: 0;
     border-radius: 10px;
     font-family: "Questrial", sans-serif;
 }
 
-.groom-name,
-.bride-name {
+.invitation-section__parent-title {
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 20px;
 }
 
-.groom-parent,
-.bride-parent {
+.invitation-section__parent {
     font-size: 18px;
     margin: 10px 0;
 }
 
-.flower-image {
+/* Hình hoa */
+.invitation-section__flower-image {
     width: 200px;
 }
 
-.invitation-text-1 {
+/* Nội dung lời mời */
+.invitation-section__text {
+    font-family: var(--font-body);
+}
+
+.invitation-section__text-line:nth-child(1) {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-.invitation-text-2 {
+.invitation-section__text-line:nth-child(2) {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 5px;
 }
 
-.invitation-text-3 {
+.invitation-section__text-line:nth-child(3) {
     margin-top: 5px;
 }
 
-.invitation-text {
-    font-family: "Questrial", sans-serif;
-}
-
-.bride-groom {
+/* Tên cô dâu – chú rể */
+.invitation-section__bride-groom {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     font-weight: bold;
     margin-bottom: 50px;
     font-family: "Dancing Script", serif;
-    align-items: center;
 }
 
-.bride-groom p,
-.bride-groom img,
-.heart-image-container {
-    flex: 1; /* Mỗi phần tử chiếm cùng một độ rộng */
-    text-align: center; /* Căn giữa văn bản */
-}
-
-.full-name-groom,
-.full-name-bride {
+.invitation-section__name {
     font-size: 34px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.heart-image {
+.invitation-section__heart {
+    flex: 1;
+    text-align: center;
+}
+
+.invitation-section__heart-image {
     width: 50px;
     height: 50px;
 }
 
-.date-time {
+/* Thông tin thời gian */
+.invitation-section__date-time {
     margin-bottom: 20px;
     font-family: "Questrial", sans-serif;
 }
 
-.date-time-text-1 {
+.invitation-section__date-line:nth-child(1) {
     font-size: 16px;
     margin-bottom: 30px;
 }
 
-.date-time-text-2 {
+.invitation-section__date-line:nth-child(2) {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.date-time-text-3 {
+.invitation-section__date-line:nth-child(3) {
     font-size: 16px;
     margin-bottom: 30px;
 }
 
-.location {
+/* Địa điểm */
+.invitation-section__location {
     margin-bottom: 20px;
     font-size: 18px;
     font-family: "Questrial", sans-serif;
 }
 
-.footer {
-    font-size: 18px;
+/* Footer */
+.invitation-section__footer {
+    font-size: 20px;
     font-weight: 700;
     font-family: "Dancing Script", serif;
+    margin: 10px 0;
+}
+
+/* Modifier cho phiên bản bride: đảo chiều nội dung */
+.invitation-section--bride .invitation-section__content {
+    flex-direction: row-reverse;
+}
+
+/* ----------------------------------------------
+   wedding-section
+---------------------------------------------- */
+.wedding-section {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.wedding-section__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.wedding-section__bride,
+.wedding-section__groom {
+    text-align: center;
+}
+
+.wedding-section__title {
+    color: #b89e58;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Dancing Script", cursive;
+}
+
+.wedding-section__name {
+    font-size: 40px;
+    font-family: "Great Vibes", cursive;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.wedding-section__message {
+    font-size: 14px;
+    color: #777;
+}
+
+.wedding-section__image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/wedding-section/img-left.png");
+    background-size: cover;
+}
+
+.wedding-section__image {
+    border-radius: 50%;
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.wedding-section__center {
+    width: 350px;
+    height: 500px;
+    border-radius: 500px;
+    overflow: hidden;
+}
+
+.wedding-section__center-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* --------------------------------------------------
-                    invitation-section-bride
+                    countdown-section
  --------------------------------------------------  */
-.invitation-section-bride {
-    flex-direction: row-reverse;
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400");
+
+/* Countdown Section Block */
+.countdown-section {
+    padding: 50px 20px;
+    background: var(--background-color, #f2f1ed);
+    text-align: center;
+    color: #333;
+}
+
+.countdown-section__container {
+    margin-bottom: 40px;
+}
+
+.countdown-section__container-line {
+    margin-bottom: 20px;
+}
+
+.countdown-section__container-line--one {
+    font-size: 20px;
+    margin: 0;
+}
+
+.countdown-section__container-line--two {
+    font-size: 60px;
+    font-weight: 700;
+    font-family: "Dancing Script", cursive;
+    margin-top: 10px;
+}
+
+.countdown-section__container-line--three {
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+/* Timer */
+.countdown-section__timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Countdown Unit */
+.countdown-section__unit {
+    float: left;
+    margin-right: 45px;
+    text-align: center;
+}
+
+.countdown-section__unit:last-child {
+    margin-right: 0;
+}
+
+.countdown-section__unit-title {
+    display: block;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    font-family: "Dancing Script", cursive;
+    font-size: 20px;
+}
+
+/* Digit (Figure) */
+.countdown-section__digit {
+    position: relative;
+    float: left;
+    height: 110px;
+    width: 100px;
+    margin-right: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2),
+        inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+}
+
+.countdown-section__digit:last-child {
+    margin-right: 0;
+}
+
+.countdown-section__digit > span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font: normal 5.94em/107px Lato;
+    font-weight: 700;
+    color: #de4848;
+}
+
+/* Flip Effect: Top & Top-back */
+.countdown-section__digit-top,
+.countdown-section__digit-top-back {
+    height: 50%;
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+.countdown-section__digit-top {
+    z-index: 3;
+    background-color: #f7f7f7;
+    transform-origin: 50% 100%;
+}
+
+.countdown-section__digit-top-back {
+    z-index: 4;
+    bottom: 0;
+    background-color: #fff;
+    transform-origin: 50% 0;
+    transform: perspective(200px) rotateX(180deg);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.countdown-section__digit-top-back span {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* Flip Effect: Bottom & Bottom-back */
+.countdown-section__digit-bottom {
+    z-index: 1;
+    position: relative;
+}
+
+.countdown-section__digit-bottom:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.countdown-section__digit-bottom-back {
+    z-index: 2;
+    top: 0;
+    height: 50%;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.countdown-section__digit-bottom-back span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 /* --------------------------------------------------
