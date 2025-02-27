@@ -1,20 +1,21 @@
 const music = document.getElementById("wedding-music");
 const musicIcon = document.getElementById("music-icon");
 
-setTimeout(() => {
-    music
-        .play()
-        .catch((error) => console.log("Tự động phát nhạc bị chặn:", error));
-    musicIcon.className = "fa-solid fa-pause";
-}, 5000); // Tự động phát nhạc sau 5 giây
-
 function toggleMusic() {
-    if (music.paused) {
-        music.play();
-        musicIcon.className = "fa-solid fa-pause";
+    const audio = document.getElementById("wedding-music");
+    const musicIcon = document.getElementById("music-icon");
+    const musicLabel = document.querySelector(".music-label");
+
+    if (audio.paused) {
+        audio.play();
+        musicIcon.classList.remove("fa-play");
+        musicIcon.classList.add("fa-pause");
+        musicLabel.style.display = "none";
     } else {
-        music.pause();
-        musicIcon.className = "fa-solid fa-play";
+        audio.pause();
+        musicIcon.classList.remove("fa-pause");
+        musicIcon.classList.add("fa-play");
+        musicLabel.style.display = "block";
     }
 }
 

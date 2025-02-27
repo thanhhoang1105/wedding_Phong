@@ -379,6 +379,7 @@ body {
 .invitation-section__heart {
     flex: 1;
     text-align: center;
+    margin-top: 34px;
 }
 
 .invitation-section__heart-image {
@@ -657,27 +658,286 @@ body {
 }
 
 /* --------------------------------------------------
+                    timeline
+ --------------------------------------------------  */
+.love-timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.love-timeline__header {
+    margin-bottom: 40px;
+}
+.love-timeline__title_sub {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+    font-family: "Dancing Script", cursive;
+}
+
+.love-timeline__container {
+    position: relative;
+}
+
+.love-timeline__container::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #ccc;
+    transform: translateX(-38%);
+    z-index: 0;
+    height: 70%;
+}
+
+.love-timeline__event {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0;
+    position: relative;
+}
+
+.love-timeline__circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.love-timeline__circle span {
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+    font-family: "Dancing Script", cursive;
+}
+
+.love-timeline__image,
+.love-timeline__text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.love-timeline__image img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.love-timeline__text {
+    text-align: left;
+    flex-direction: column;
+}
+.love-timeline__text--right {
+    text-align: right;
+}
+.love-timeline__text--left {
+    text-align: left;
+}
+.love-timeline__text-title {
+    font-size: 24px;
+    margin: 0 0 10px;
+    font-weight: 600;
+}
+.love-timeline__text-desc {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.love-timeline__event--top .love-timeline__image--left {
+    order: 1;
+}
+.love-timeline__event--top .love-timeline__circle {
+    order: 2;
+}
+.love-timeline__event--top .love-timeline__text--right {
+    order: 3;
+}
+
+.love-timeline__event--bottom .love-timeline__text--left {
+    order: 1;
+}
+.love-timeline__event--bottom .love-timeline__circle {
+    order: 2;
+}
+.love-timeline__event--bottom .love-timeline__image--right {
+    order: 3;
+}
+
+/* --------------------------------------------------
+                    album-section
+ --------------------------------------------------  */
+.album-section {
+    padding: 50px 20px;
+    background: #fff; /* Màu nền tùy ý */
+    box-sizing: border-box;
+}
+
+.album-section__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.album-section__left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.album-section__small-title {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    color: #555;
+    font-weight: 400;
+}
+
+.album-section__main-title {
+    font-size: 36px;
+    margin: 10px 0 20px 0;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.album-section__images-left {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.album-section__img {
+    width: 220px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.album-section__img_1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.album-section__img_2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.album-section__img_3 {
+    grid-area: 2 / 1 / 3 / 3;
+    width: 100% !important;
+}
+
+.album-section__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    gap: 20px;
+}
+
+.album-section__images-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    position: relative;
+}
+
+.album-section__img_4 {
+    grid-area: 1 / 1 / 2 / 3;
+    width: 100% !important;
+    position: absolute;
+    bottom: 10px;
+}
+
+.album-section__img_5 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.album-section__img_6 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.album-section__quote {
+    margin-top: auto;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.4;
+    align-self: flex-end;
+    font-family: "Dancing Script", cursive;
+    font-size: 26px;
+}
+
+/* --------------------------------------------------
                     music-control
  --------------------------------------------------  */
 /* Nút điều khiển nhạc */
 .music-control {
     position: fixed;
     bottom: 20px;
-    right: 20px;
-    background-color: #fff;
-    border: 2px solid #000;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    left: 20px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+    gap: 10px;
     z-index: 1000;
 }
 
-.music-control i {
-    font-size: 24px;
-    color: #000;
+.music-control button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #edf2f4;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.music-label {
+    color: #333;
+    font-size: 14px;
+    background: #ef233c;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }

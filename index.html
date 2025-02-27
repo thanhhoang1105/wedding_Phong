@@ -552,12 +552,144 @@
             </div>
         </section>
 
+        <section class="love-timeline">
+            <!-- Tiêu đề -->
+            <div class="love-timeline__header">
+                <p class="love-timeline__title">Chuyện chúng mình</p>
+                <h2 class="love-timeline__title_sub">Đã Bắt Đầu Như Thế Nào</h2>
+            </div>
+
+            <!-- Khung chứa 2 sự kiện -->
+            <div class="love-timeline__container">
+                <!-- Sự kiện 1 (trên) -->
+                <div class="love-timeline__event love-timeline__event--top">
+                    <!-- Ảnh bên trái -->
+                    <div
+                        class="love-timeline__image love-timeline__image--left"
+                    >
+                        <img
+                            src="images/time-line/IMG_4556.JPG"
+                            alt="Ảnh sự kiện trên"
+                        />
+                    </div>
+
+                    <!-- Vòng tròn ngày ở giữa -->
+                    <div class="love-timeline__circle">
+                        <span>03/07</span>
+                    </div>
+
+                    <!-- Nội dung (text) bên phải -->
+                    <div class="love-timeline__text love-timeline__text--right">
+                        <h3 class="love-timeline__text-title">Anh ngỏ lời</h3>
+                        <p class="love-timeline__text-desc">
+                            Anh ngỏ lời vào một ngày quan trọng đánh dấu chương
+                            mới cho chúng mình, vào ngày 03/07/2020
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sự kiện 2 (dưới) -->
+                <div class="love-timeline__event love-timeline__event--bottom">
+                    <!-- Nội dung (text) bên trái -->
+                    <div class="love-timeline__text love-timeline__text--left">
+                        <h3 class="love-timeline__text-title">Cầu hôn</h3>
+                        <p class="love-timeline__text-desc">
+                            Sau nhiều kỷ niệm êm đềm, anh đã chính thức cầu hôn
+                            em vào ngày 29/12/2020
+                        </p>
+                    </div>
+
+                    <!-- Vòng tròn ngày ở giữa -->
+                    <div class="love-timeline__circle">
+                        <span>29/12</span>
+                    </div>
+
+                    <!-- Ảnh bên phải -->
+                    <div
+                        class="love-timeline__image love-timeline__image--right"
+                    >
+                        <img
+                            src="images/time-line/IMG_4541.JPG"
+                            alt="Ảnh sự kiện dưới"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- album-section -->
+        <section class="album-section">
+            <div class="album-section__container">
+                <!-- Cột trái -->
+                <div class="album-section__left">
+                    <!-- Tiêu đề nhỏ -->
+                    <p class="album-section__small-title">Kỉ niệm cưới</p>
+                    <!-- Tiêu đề lớn -->
+                    <h2 class="album-section__main-title">
+                        Những Khoảnh Khắc Đáng Nhớ
+                    </h2>
+
+                    <!-- Hai ảnh xếp dọc bên dưới -->
+                    <div class="album-section__images-left">
+                        <img
+                            src="images/album/IMG_4540.JPG"
+                            alt="Ảnh 1"
+                            class="album-section__img album-section__img_1"
+                        />
+                        <img
+                            src="images/album/IMG_4546.JPG"
+                            alt="Ảnh 2"
+                            class="album-section__img album-section__img_2"
+                        />
+                        <img
+                            src="images/album/IMG_4579.JPG"
+                            alt="Ảnh 2"
+                            class="album-section__img album-section__img_3"
+                        />
+                    </div>
+                </div>
+
+                <!-- Cột phải -->
+                <div class="album-section__right">
+                    <div class="album-section__images-right">
+                        <img
+                            src="images/album/IMG_4649.JPG"
+                            alt="Ảnh 5"
+                            class="album-section__img album-section__img_4"
+                        />
+                        <img
+                            src="images/album/IMG_4556.JPG"
+                            alt="Ảnh 3"
+                            class="album-section__img album-section__img_5"
+                        />
+                        <img
+                            src="images/album/IMG_4582.JPG"
+                            alt="Ảnh 4"
+                            class="album-section__img album-section__img_6"
+                        />
+                    </div>
+                    <p class="album-section__quote">
+                        “ Hãy để tình yêu diễn biến thật tự nhiên, đã là duyên
+                        thì cũng chẳng sợ lạc đường. ”
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <!-- Music Player -->
-        <audio id="wedding-music" src="audio/motdoi.mp3" preload="auto"></audio>
+        <audio
+            id="wedding-music"
+            src="audio/motdoi.mp3"
+            preload="auto"
+            controls
+        ></audio>
 
         <!-- Music Control Button -->
-        <div class="music-control" onclick="toggleMusic()">
-            <i id="music-icon" class="fa-solid fa-play"></i>
+        <div class="music-control">
+            <button onclick="toggleMusic()">
+                <i id="music-icon" class="fa-solid fa-play"></i>
+            </button>
+            <span class="music-label">Bấm để nghe nhạc</span>
         </div>
     </body>
 </html>
