@@ -897,6 +897,10 @@ body {
                     music-control
  --------------------------------------------------  */
 /* Nút điều khiển nhạc */
+#wedding-music {
+    display: none;
+}
+
 .music-control {
     position: fixed;
     bottom: 20px;
