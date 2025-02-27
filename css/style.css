@@ -1,0 +1,430 @@
+:root {
+    --font-size-base: 16px;
+    --font-size-large: 26px;
+    --font-size-xlarge: 3rem;
+    --font-color-primary: #333;
+    --font-color-highlight: #d48d6d;
+    --border-color: #00000059;
+    --background-color: #ffffff;
+    --background-image: url("../images/home/background.jpg");
+}
+
+/* Font chính: Manrope (sans-serif) */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    font-family: "Manrope", sans-serif;
+    color: #333;
+}
+/* --------------------------------------------------
+                    home-section
+ --------------------------------------------------  */
+/* Phần bao quanh hero (ảnh + tên cặp đôi) */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    background-image: url("../images/home/background.jpg"); /* Đường dẫn đến hình nền */
+    background-size: cover; /* Đảm bảo hình nền bao phủ toàn bộ section */
+    background-position: center; /* Căn giữa hình nền */
+}
+
+/* Bọc nội dung hero */
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1400px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Ảnh bên trái, phải */
+.hero-image {
+    flex: 1 1 50px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    position: relative;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 300px;
+    object-fit: cover;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.hero-image-left::before,
+.hero-image-left::after,
+.hero-image-right::before,
+.hero-image-right::after {
+    content: "";
+    position: absolute;
+    width: 50px; /* Kích thước của icon, bạn có thể thay đổi */
+    height: 50px; /* Kích thước của icon, bạn có thể thay đổi */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hero-image-left::before {
+    bottom: 0px; /* Điều chỉnh vị trí của icon */
+    left: -55px; /* Điều chỉnh vị trí của icon */
+    width: 117px;
+    height: 180px;
+    background-image: url("../images/home/icon-flowers-left-before.png"); /* Đường dẫn đến icon */
+}
+
+.hero-image-left::after {
+    top: 0;
+    right: -50px;
+    width: 117px;
+    height: 180px;
+    background-image: url("../images/home/icon-flowers-left-after.png");
+}
+
+.hero-image-right::before {
+    top: -20px;
+    left: -40px;
+    width: 117px;
+    height: 180px;
+    background-image: url("../images/home/icon-flowers-right-before.png"); /* Đường dẫn đến icon */
+    transform: scaleY(-1);
+}
+
+.hero-image-right::after {
+    bottom: -0;
+    right: -40px;
+    width: 117px;
+    height: 180px;
+    background-image: url("../images/home/icon-flowers-right-after.png");
+    transform: scaleY(-1);
+}
+
+/* Phần text ở giữa */
+.hero-text {
+    flex: 1 1 300px;
+    text-align: center;
+    margin: 50px;
+}
+
+.wedding-title {
+    color: #555555;
+}
+
+.couple-name {
+    font-family: "Great Vibes", cursive;
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 400;
+    color: #000;
+}
+
+/* Ngày tháng năm cưới */
+.wedding-date {
+    font-size: 26px;
+    margin: 30px 0;
+    position: relative;
+    padding: 10px 0;
+}
+
+.wedding-date::before,
+.wedding-date::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #000;
+}
+
+.wedding-date::before {
+    top: 0;
+}
+
+.wedding-date::after {
+    bottom: 0;
+}
+
+/* Địa điểm cưới */
+.wedding-location {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1rem;
+    margin: 30px 0 30px 0;
+}
+
+/* Nút xem thiệp */
+.btn-view-invite {
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #00000059;
+    color: #000;
+    text-decoration: none;
+    padding: 17px 50px 13px;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-view-invite:hover {
+    background-color: #bf7c5d;
+}
+
+/* --------------------------------------------------
+                    event-section
+ --------------------------------------------------  */
+/* Phần nội dung thiệp */
+.content-section {
+    padding: 40px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.content-section-full {
+    background: #fff;
+    text-align: center;
+}
+
+.content-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.content-container h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.content-container-full {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.event-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.event {
+    flex: 1 1 30%;
+    text-align: center;
+    perspective: 1000px; /* Thêm perspective cho hiệu ứng 3D */
+}
+
+.event img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.event:hover img {
+    transform: rotateY(180deg);
+}
+
+.event-time {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.event h4 {
+    font-size: 30px;
+    margin: 20px 0;
+    font-weight: 700;
+    font-family: "Dancing Script", serif;
+}
+
+.event-description {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* --------------------------------------------------
+                    invitation-section-groom
+ --------------------------------------------------  */
+.invitation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.left-container {
+    flex: 1 1 50%;
+}
+
+.save-the-date-image {
+    max-width: 100%;
+    height: auto;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.right-container {
+    flex: 1 1 50%;
+}
+
+.parents {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.parents div {
+    width: 45%;
+    padding: 20px 20px 0 20px;
+    border-radius: 10px;
+    font-family: "Questrial", sans-serif;
+}
+
+.groom-name,
+.bride-name {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.groom-parent,
+.bride-parent {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.flower-image {
+    width: 200px;
+}
+
+.invitation-text-1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.invitation-text-2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.invitation-text-3 {
+    margin-top: 5px;
+}
+
+.invitation-text {
+    font-family: "Questrial", sans-serif;
+}
+
+.bride-groom {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-family: "Dancing Script", serif;
+    align-items: center;
+}
+
+.bride-groom p,
+.bride-groom img,
+.heart-image-container {
+    flex: 1; /* Mỗi phần tử chiếm cùng một độ rộng */
+    text-align: center; /* Căn giữa văn bản */
+}
+
+.full-name-groom,
+.full-name-bride {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.heart-image {
+    width: 50px;
+    height: 50px;
+}
+
+.date-time {
+    margin-bottom: 20px;
+    font-family: "Questrial", sans-serif;
+}
+
+.date-time-text-1 {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.date-time-text-2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.date-time-text-3 {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.location {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: "Questrial", sans-serif;
+}
+
+.footer {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Dancing Script", serif;
+}
+
+/* --------------------------------------------------
+                    invitation-section-bride
+ --------------------------------------------------  */
+.invitation-section-bride {
+    flex-direction: row-reverse;
+}
+
+/* --------------------------------------------------
+                    music-control
+ --------------------------------------------------  */
+/* Nút điều khiển nhạc */
+.music-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.music-control i {
+    font-size: 24px;
+    color: #000;
+}
