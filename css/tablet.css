@@ -1,0 +1,268 @@
+@media screen and (max-width: 768px) {
+    /* --------------------------------------------------
+                    home-section
+    --------------------------------------------------  */
+    .home__content {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .home__text {
+        order: 1;
+    }
+
+    .home__image--left {
+        order: 2;
+    }
+
+    .home__image--right {
+        order: 3;
+    }
+
+    .home__image {
+        margin: 20px;
+    }
+
+    .home__image--left::before,
+    .home__image--left::after,
+    .home__image--right::before,
+    .home__image--right::after {
+        width: 90px;
+        height: 140px;
+    }
+
+    .home__image--left::before {
+        bottom: -20px;
+        left: -20px;
+    }
+
+    .home__image--left::after {
+        top: -20px;
+        right: -20px;
+    }
+
+    .home__image--right::before {
+        top: -20px;
+        left: -20px;
+    }
+
+    .home__image--right::after {
+        bottom: -20px;
+        right: -20px;
+    }
+
+    /* ----------------------------------------------
+                event-section
+    ---------------------------------------------- */
+    .event-section {
+        padding: 20px;
+    }
+
+    .event-section__heading {
+        margin: 20px 0;
+    }
+
+    .event-section__item {
+        flex: unset;
+    }
+
+    /* ----------------------------------------------
+                invitation-section
+    ---------------------------------------------- */
+    .invitation-section {
+        padding: 20px 0px;
+    }
+
+    .invitation-section__content {
+        padding: 20px 10px;
+    }
+
+    .invitation-section__left {
+        display: none;
+    }
+
+    .invitation-section__flower-image {
+        width: 100px;
+    }
+
+    .invitation-section__parent-group {
+        padding: 0;
+    }
+
+    .invitation-section__parent-title {
+        font-size: 18px;
+    }
+
+    .invitation-section__parent {
+        font-size: 16px;
+    }
+
+    .invitation-section__bride-groom {
+        margin-bottom: 30px;
+    }
+
+    .invitation-section__date-line:nth-child(1) {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .invitation-section__date-line:nth-child(2) {
+        margin-bottom: 5px;
+    }
+
+    /* ----------------------------------------------
+                wedding-section
+    ---------------------------------------------- */
+    .wedding-section {
+        padding: 20px;
+    }
+
+    .wedding-section__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wedding-section__center {
+        order: 1;
+    }
+
+    .wedding-section__bride {
+        order: 2;
+    }
+
+    .wedding-section__groom {
+        order: 3;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wedding-section__title {
+        order: 1;
+    }
+
+    .wedding-section__name {
+        order: 2;
+    }
+
+    .wedding-section__image-wrapper {
+        order: 3;
+    }
+
+    /* ----------------------------------------------
+                countdown-section
+    ---------------------------------------------- */
+    .countdown-section {
+        padding: 20px;
+    }
+
+    .countdown-section__container-line--two {
+        font-size: 40px;
+    }
+
+    .countdown-section__timer {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .countdown-section__unit {
+        margin-right: unset;
+    }
+    /* ----------------------------------------------
+                timeline-section
+    ---------------------------------------------- */
+    .love-timeline {
+        padding: 20px;
+    }
+
+    .love-timeline__container::before {
+        content: unset;
+    }
+
+    .love-timeline__event {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .love-timeline__text-desc {
+        text-align: center;
+    }
+
+    .love-timeline__circle--one {
+        order: 1 !important;
+    }
+
+    .love-timeline__image--left {
+        order: 2 !important;
+    }
+
+    .love-timeline__circle--two {
+        order: 1 !important;
+    }
+
+    .love-timeline__image--two {
+        order: 2 !important;
+    }
+
+    .love-timeline__text--two {
+        order: 3 !important;
+    }
+
+    /* ----------------------------------------------
+                album-section
+    ---------------------------------------------- */
+    .album-section {
+        padding: 20px;
+    }
+
+    .album-section__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .album-section__small-title {
+        text-align: center;
+    }
+
+    .album-section__images-left,
+    .album-section__images-right {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    .album-section__img {
+        width: 100%;
+        grid-area: unset;
+        position: unset;
+    }
+
+    .album-section__main-title,
+    .album-section__quote {
+        text-align: center;
+    }
+
+    .album-section__quote {
+        margin: 20px 0 0 0;
+    }
+
+    /* ----------------------------------------------
+                rsvp-section
+    ---------------------------------------------- */
+    .rsvp-section {
+        padding: 20px;
+    }
+
+    .rsvp-section__container,
+    .rsvp-section__message-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rsvp-section__form {
+        width: 80%;
+    }
+}

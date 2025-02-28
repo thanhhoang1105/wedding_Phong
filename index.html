@@ -24,6 +24,7 @@
 
         <!-- Link đến file CSS -->
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/tablet.css" />
         <link rel="stylesheet" href="css/common.css" />
 
         <!-- Link đến file JavaScript -->
@@ -70,26 +71,26 @@
                 <div class="event-section__grid">
                     <div class="event-section__item">
                         <img
-                            src="images/event/event-1.png"
-                            alt="Đón Khách"
-                            class="event-section__item-image"
-                        />
-                        <p class="event-section__item-time">17:00</p>
-                        <h4 class="event-section__item-title">Đón Khách</h4>
-                        <p class="event-section__item-description">
-                            Bắt đầu đón khách
-                        </p>
-                    </div>
-                    <div class="event-section__item">
-                        <img
                             src="images/event/event-2.png"
                             alt="Làm Lễ"
                             class="event-section__item-image"
                         />
-                        <p class="event-section__item-time">18:00</p>
+                        <p class="event-section__item-time">09:00</p>
                         <h4 class="event-section__item-title">Làm Lễ</h4>
                         <p class="event-section__item-description">
                             Bắt đầu làm lễ
+                        </p>
+                    </div>
+                    <div class="event-section__item">
+                        <img
+                            src="images/event/event-1.png"
+                            alt="Đón Khách"
+                            class="event-section__item-image"
+                        />
+                        <p class="event-section__item-time">10:00</p>
+                        <h4 class="event-section__item-title">Đón Khách</h4>
+                        <p class="event-section__item-description">
+                            Bắt đầu đón khách
                         </p>
                     </div>
                     <div class="event-section__item">
@@ -98,7 +99,7 @@
                             alt="Khai Tiệc"
                             class="event-section__item-image"
                         />
-                        <p class="event-section__item-time">19:00</p>
+                        <p class="event-section__item-time">11:00</p>
                         <h4 class="event-section__item-title">Khai Tiệc</h4>
                         <p class="event-section__item-description">
                             Bắt đầu khai tiệc
@@ -275,7 +276,7 @@
                                 Bạn cùng gia đình
                             </p>
                             <p class="invitation-section__text-line">
-                                (Tới dự lễ Vu Quy của hai con chúng tôi)
+                                (Tới dự lễ Tân Hôn của hai con chúng tôi)
                             </p>
                         </div>
                         <div class="invitation-section__bride-groom">
@@ -339,7 +340,6 @@
                 <div class="wedding-section__bride">
                     <p class="wedding-section__title">CÔ DÂU</p>
                     <p class="wedding-section__name">Võ Thị Thúy</p>
-                    <p class="wedding-section__message">Cô dâu viết gì đi...</p>
                     <div class="wedding-section__image-wrapper">
                         <img
                             src="./images/wedding-section/IMG_4561.JPG"
@@ -367,7 +367,6 @@
                     </div>
                     <p class="wedding-section__title">CHÚ RỂ</p>
                     <p class="wedding-section__name">Lê Anh Tùng</p>
-                    <p class="wedding-section__message">Chú rể viết gì đi...</p>
                 </div>
             </div>
         </section>
@@ -562,7 +561,7 @@
                         <h3 class="love-timeline__text-title">Anh ngỏ lời</h3>
                         <p class="love-timeline__text-desc">
                             Anh ngỏ lời vào một ngày quan trọng đánh dấu chương
-                            mới cho chúng mình, vào ngày 03/07/2020
+                            mới cho chúng mình, vào ngày 03/07/2018.
                         </p>
                     </div>
                 </div>
@@ -574,7 +573,7 @@
                         <h3 class="love-timeline__text-title">Cầu hôn</h3>
                         <p class="love-timeline__text-desc">
                             Sau nhiều kỷ niệm êm đềm, anh đã chính thức cầu hôn
-                            em vào ngày 29/12/2020
+                            em vào ngày 29/12/2022.
                         </p>
                     </div>
 
@@ -663,7 +662,7 @@
                             <label>
                                 <input
                                     type="radio"
-                                    name="attend"
+                                    name="Attend"
                                     value="có"
                                     required
                                 />
@@ -672,7 +671,7 @@
                             <label>
                                 <input
                                     type="radio"
-                                    name="attend"
+                                    name="Attend"
                                     value="không"
                                     required
                                 />
@@ -685,7 +684,7 @@
                             <input
                                 type="text"
                                 id="name"
-                                name="name"
+                                name="Name"
                                 placeholder="Tên của bạn"
                                 required
                             />
@@ -696,9 +695,8 @@
                             <input
                                 type="email"
                                 id="email"
-                                name="email"
+                                name="Email"
                                 placeholder="Email"
-                                required
                             />
                         </div>
 
@@ -707,10 +705,20 @@
                             <input
                                 type="tel"
                                 id="phone"
-                                name="phone"
+                                name="Phone"
                                 placeholder="Số điện thoại"
                                 required
                             />
+                        </div>
+
+                        <div class="rsvp-section__group">
+                            <label for="description">Lời chúc</label>
+                            <textarea
+                                id="description"
+                                name="Description"
+                                placeholder="Nhập lời chúc vào đây"
+                                rows="4"
+                            ></textarea>
                         </div>
 
                         <div class="rsvp-section__group">
@@ -718,7 +726,7 @@
                             <label>
                                 <input
                                     type="radio"
-                                    name="guestOf"
+                                    name="GuestOf"
                                     value="codau"
                                     required
                                 />
@@ -727,7 +735,7 @@
                             <label>
                                 <input
                                     type="radio"
-                                    name="guestOf"
+                                    name="GuestOf"
                                     value="chure"
                                     required
                                 />
@@ -736,7 +744,7 @@
                             <label>
                                 <input
                                     type="radio"
-                                    name="guestOf"
+                                    name="GuestOf"
                                     value="khac"
                                     required
                                 />
@@ -775,6 +783,15 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- curtan section -->
+        <section class="curtain" id="curtain">
+            <div class="curtain__panel curtain__panel--left"></div>
+            <div class="curtain__content">
+                <img src="./images/hy.png" alt="Hỷ" class="hy-image" />
+            </div>
+            <div class="curtain__panel curtain__panel--right"></div>
         </section>
 
         <!-- Music Player -->

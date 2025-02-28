@@ -187,30 +187,52 @@ const Countdown = {
 
 Countdown.init();
 
-const scriptURL =
-    "https://script.google.com/macros/s/AKfycbxOpwcCMBU4AhU7rYrDFut60VKP9awVkALSK3rnxfS9cn8FukniFHXzf1y8bZI-s9lVmg/exec";
+const scriptURL = "https://sheetdb.io/api/v1/aavbxdxl8bvit";
 const form = document.getElementById("rsvpForm");
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // Tạo formData
     const formData = new FormData(form);
+    const formObject = {};
 
-    // Gửi POST request
-    fetch(scriptURL, { method: "POST", body: formData })
-        .then((response) => response.json())
-        .then((data) => {
-            if (data.result === "success") {
-                alert("Gửi thành công! Cảm ơn bạn đã phản hồi.");
-                form.reset();
-            } else {
-                alert("Có lỗi xảy ra, vui lòng thử lại!");
-                console.log("Error data:", data);
-            }
-        })
-        .catch((error) => {
-            alert("Kết nối bị lỗi, vui lòng thử lại!");
-            console.error("Error!", error);
+    formObject.Timestamp = new Date().toLocaleString();
+    formData.forEach((value, key) => {
+        formObject[key] = value;
+    });
+
+    try {
+        const response = await fetch(scriptURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ data: formObject }),
         });
+
+        const data = await response.json();
+        if (data.created) {
+            alert("Gửi thành công! Cảm ơn bạn đã phản hồi.");
+            form.reset();
+        } else {
+            alert("Có lỗi xảy ra, vui lòng thử lại!");
+            console.log("Error data:", data);
+        }
+    } catch (error) {
+        alert("Kết nối bị lỗi, vui lòng thử lại!");
+        console.error("Error!", error);
+    }
 });
+
+document.querySelector('.hy-image').addEventListener('click', () => {
+    document.querySelector('.curtain__panel--left').style.transform = 'translateX(-100%)';
+    document.querySelector('.curtain__panel--right').style.transform = 'translateX(100%)';
+
+    toggleMusic();
+
+    // Sau hiệu ứng hoàn tất, ẩn curtain và cho phép scroll
+    setTimeout(() => {
+      document.getElementById('curtain').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }, 1500);
+  });
