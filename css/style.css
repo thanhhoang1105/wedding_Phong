@@ -6,7 +6,7 @@
     --font-color-highlight: #d48d6d;
     --border-color: #00000059;
     --background-color: #ffffff;
-    --background-image: url("../images/home/background.jpg");
+    --background-image: url("../images/home/background.webp");
 
     --text-color-black: #000; /* Màu đen */
     --text-color-white: #fff; /* Màu trắng */
@@ -93,26 +93,26 @@ body {
 .home__image--left::before {
     bottom: 0;
     left: -55px;
-    background-image: url("../images/home/icon-flowers-left-before.png");
+    background-image: url("../images/home/icon-flowers-left-before.webp");
 }
 
 .home__image--left::after {
     top: 0;
     right: -50px;
-    background-image: url("../images/home/icon-flowers-left-after.png");
+    background-image: url("../images/home/icon-flowers-left-after.webp");
 }
 
 .home__image--right::before {
     top: -20px;
     left: -40px;
-    background-image: url("../images/home/icon-flowers-right-before.png");
+    background-image: url("../images/home/icon-flowers-right-before.webp");
     transform: scaleY(-1);
 }
 
 .home__image--right::after {
     bottom: 0;
     right: -40px;
-    background-image: url("../images/home/icon-flowers-right-after.png");
+    background-image: url("../images/home/icon-flowers-right-after.webp");
     transform: scaleY(-1);
 }
 
@@ -468,7 +468,7 @@ body {
     overflow: hidden;
     width: 300px;
     height: 300px;
-    background-image: url("../images/wedding-section/img-left.png");
+    background-image: url("../images/wedding-section/img-left.webp");
     background-size: cover;
 }
 
@@ -1056,7 +1056,7 @@ body {
 .curtain__panel {
     width: 50%;
     height: 100vh;
-    background: #FDE2E4  ;
+    background: #fde2e4;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -9,6 +9,7 @@
 
     .home__text {
         order: 1;
+        margin: 20px;
     }
 
     .home__image--left {
