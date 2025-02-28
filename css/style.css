@@ -267,11 +267,9 @@ body {
 .invitation-section__container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 40px 0;
 }
 
 .invitation-section__title {
-    padding: 40px 0;
     font-family: "Dancing Script", serif;
     font-size: 60px;
     margin: 0;
@@ -432,7 +430,7 @@ body {
    wedding-section
 ---------------------------------------------- */
 .wedding-section {
-    padding: 50px;
+    padding: 40px;
     background-color: #fff;
 }
 
@@ -506,7 +504,7 @@ body {
 
 /* Countdown Section Block */
 .countdown-section {
-    padding: 50px 20px;
+    padding: 40px 20px;
     background: var(--background-color, #f2f1ed);
     text-align: center;
     color: #333;
@@ -663,7 +661,7 @@ body {
 .love-timeline {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 40px 20px;
     position: relative;
     text-align: center;
     box-sizing: border-box;
@@ -787,7 +785,7 @@ body {
                     album-section
  --------------------------------------------------  */
 .album-section {
-    padding: 50px 20px;
+    padding: 40px 20px;
     background: #fff; /* Màu nền tùy ý */
     box-sizing: border-box;
 }
@@ -898,7 +896,7 @@ body {
  --------------------------------------------------  */
 /* Container tổng */
 .rsvp-section {
-    padding: 50px 20px;
+    padding: 40px 20px;
     background-color: #fff; /* Tùy ý */
     box-sizing: border-box;
     font-family: "Manrope", sans-serif; /* Ví dụ font */
@@ -1065,5 +1063,334 @@ body {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .home {
+        min-height: auto;
+    }
+
+    .home__content {
+        padding: 60px;
+    }
+
+    .home__text {
+        margin: 20px;
+    }
+
+    .home__title {
+        font-size: 20px;
+    }
+
+    .home__couple-name {
+        font-size: 40px;
+    }
+
+    .home__couple-name--separator {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    /* --------------------------------------------------
+                    home-section
+    --------------------------------------------------  */
+    .home__content {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .home__image.home__image--left {
+        order: 2;
+    }
+    .home__image.home__image--right {
+        order: 3;
+    }
+
+    .home__image--left::before,
+    .home__image--left::after,
+    .home__image--right::before,
+    .home__image--right::after {
+        width: 100px;
+        height: 130px;
+    }
+
+    .home__image--left::before {
+        bottom: -20px;
+        left: 0px;
+    }
+
+    .home__image--left::after {
+        top: -20px;
+        right: -10px;
+    }
+
+    .home__image--right::before {
+        top: -20px;
+        left: -10px;
+    }
+
+    .home__image--right::after {
+        bottom: -20px;
+        right: -30px;
+    }
+
+    /* --------------------------------------------------
+                    event-section
+    --------------------------------------------------  */
+    .invitation-section__content {
+        flex-direction: column !important;
+    }
+
+    /* --------------------------------------------------
+                    countdown-section
+    --------------------------------------------------  */
+    .countdown-section__unit {
+        margin-right: 20px;
+    }
+
+    .countdown-section__digit {
+        height: 80px;
+        width: 70px;
+    }
+
+    .countdown-section__digit > span {
+        font: normal 3.94em / 80px Lato;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* --------------------------------------------------
+                    home-section
+    --------------------------------------------------  */
+
+    .home__content {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .home__image {
+        margin: 20px;
+    }
+
+    .home__image--left::before,
+    .home__image--left::after,
+    .home__image--right::before,
+    .home__image--right::after {
+        width: 100px;
+        height: 150px;
+    }
+
+    .home__image--left::before {
+        bottom: 10px;
+        left: -30px;
+    }
+
+    .home__image--left::after {
+        top: -30px;
+        right: -30px;
+    }
+
+    .home__image--right::before {
+        top: -30px;
+        left: -30px;
+    }
+
+    .home__image--right::after {
+        bottom: -25px;
+        right: -15px;
+    }
+
+    /* ----------------------------------------------
+                event-section
+    ---------------------------------------------- */
+    .event-section {
+        padding: 20px;
+    }
+
+    .event-section__heading {
+        margin: 20px 0;
+    }
+
+    .event-section__item {
+        flex: unset;
+    }
+
+    /* ----------------------------------------------
+                invitation-section
+    ---------------------------------------------- */
+    .invitation-section {
+        padding: 20px 0px;
+    }
+
+    .invitation-section__content {
+        padding: 20px 10px;
+    }
+
+    .invitation-section__left {
+        display: none;
+    }
+
+    .invitation-section__flower-image {
+        width: 100px;
+    }
+
+    .invitation-section__parent-group {
+        padding: 0;
+    }
+
+    .invitation-section__parent-title {
+        font-size: 18px;
+    }
+
+    .invitation-section__parent {
+        font-size: 16px;
+    }
+
+    .invitation-section__bride-groom {
+        margin-bottom: 30px;
+    }
+
+    .invitation-section__date-line:nth-child(1) {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .invitation-section__date-line:nth-child(2) {
+        margin-bottom: 5px;
+    }
+
+    /* ----------------------------------------------
+                wedding-section
+    ---------------------------------------------- */
+    .wedding-section__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wedding-section__center {
+        order: 1;
+    }
+
+    .wedding-section__bride {
+        order: 2;
+    }
+
+    .wedding-section__groom {
+        order: 3;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wedding-section__title {
+        order: 1;
+    }
+
+    .wedding-section__name {
+        order: 2;
+    }
+
+    .wedding-section__message {
+        order: 3;
+    }
+
+    .wedding-section__image-wrapper {
+        order: 4;
+    }
+
+    /* ----------------------------------------------
+                countdown-section
+    ---------------------------------------------- */
+    .countdown-section__container-line--two {
+        font-size: 40px;
+    }
+
+    .countdown-section__timer {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .countdown-section__unit {
+        margin-right: unset;
+    }
+    /* ----------------------------------------------
+                timeline-section
+    ---------------------------------------------- */
+    .love-timeline__container::before {
+        content: unset;
+    }
+
+    .love-timeline__event {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .love-timeline__text-desc {
+        text-align: center;
+    }
+
+    .love-timeline__circle--one {
+        order: 1 !important;
+    }
+
+    .love-timeline__image--left {
+        order: 2 !important;
+    }
+
+    .love-timeline__circle--two {
+        order: 1 !important;
+    }
+
+    .love-timeline__image--two {
+        order: 2 !important;
+    }
+
+    .love-timeline__text--two {
+        order: 3 !important;
+    }
+
+    /* ----------------------------------------------
+                album-section
+    ---------------------------------------------- */
+    .album-section__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .album-section__images-left,
+    .album-section__images-right {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    .album-section__img {
+        width: 100%;
+        grid-area: unset;
+        position: unset;
+    }
+
+    .album-section__main-title,
+    .album-section__quote {
+        text-align: center;
+    }
+
+    .album-section__quote {
+        margin-top: 20px;
+        align-self: center;
+    }
+
+    /* ----------------------------------------------
+                rsvp-section
+    ---------------------------------------------- */
+    .rsvp-section__container,
+    .rsvp-section__message-block {
+        flex-direction: column;
     }
 }
