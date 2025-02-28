@@ -235,6 +235,21 @@
         grid-row-gap: 10px;
     }
 
+    .album-section__img_1,
+    .album-section__img_5 {
+        order: 1;
+    }
+
+    .album-section__img_3,
+    .album-section__img_4 {
+        order: 2;
+    }
+
+    .album-section__img_2,
+    .album-section__img_6 {
+        order: 3;
+    }
+
     .album-section__img {
         width: 100%;
         grid-area: unset;
