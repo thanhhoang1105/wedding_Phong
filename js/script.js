@@ -188,7 +188,7 @@ const Countdown = {
 Countdown.init();
 
 const scriptURL =
-    "https://script.google.com/macros/s/AKfycbxX_Hj_E1u3NI2S0XkuU1lp9-V7CZ1eLnmhbJyp4kCdtDC0BY5jSBxTv4xoOSw8_oQeJg/exec";
+    "https://script.google.com/macros/s/AKfycbxOpwcCMBU4AhU7rYrDFut60VKP9awVkALSK3rnxfS9cn8FukniFHXzf1y8bZI-s9lVmg/exec";
 const form = document.getElementById("rsvpForm");
 
 form.addEventListener("submit", (e) => {
