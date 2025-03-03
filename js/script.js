@@ -224,15 +224,19 @@ form.addEventListener("submit", async (e) => {
     }
 });
 
-document.querySelector('.hy-image').addEventListener('click', () => {
-    document.querySelector('.curtain__panel--left').style.transform = 'translateX(-100%)';
-    document.querySelector('.curtain__panel--right').style.transform = 'translateX(100%)';
+document.body.style.overflow = "hidden";
+
+document.querySelector(".curtain").addEventListener("click", () => {
+    document.querySelector(".curtain__panel--left").style.transform =
+        "translateX(-100%)";
+    document.querySelector(".curtain__panel--right").style.transform =
+        "translateX(100%)";
 
     toggleMusic();
 
     // Sau hiệu ứng hoàn tất, ẩn curtain và cho phép scroll
     setTimeout(() => {
-      document.getElementById('curtain').style.display = 'none';
-      document.body.style.overflow = 'auto';
+        document.getElementById("curtain").style.display = "none";
+        document.body.style.overflow = "auto";
     }, 1500);
-  });
+});
