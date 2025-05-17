@@ -20,7 +20,7 @@ function toggleMusic() {
 }
 
 // Cập nhật ngày cưới (sửa theo nhu cầu)
-const weddingDate = new Date("2025-04-05T11:00:00").getTime();
+const weddingDate = new Date("2025-05-25T11:00:00").getTime();
 
 const Countdown = {
     $timer: $(".countdown-section__timer"),
